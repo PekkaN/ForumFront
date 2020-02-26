@@ -1,12 +1,20 @@
 import React from 'react';
 import './App.css';
 import FrontPage from "./FrontPage";
-import AllThreadsPage from "./AllThreadsPage"
-import SingleThreadPage from "./SingleThreadPage";
+import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
+import AllThreadsPage from "./AllThreadsPage";
 
 
 const App = () => {
-  return <SingleThreadPage/>
+
+  return (
+      <div className="FrontPage">
+          <Navbar/>
+          <FrontPage/>
+          <Sidebar/>
+      </div>
+  )
 }
 
 export default App;
