@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch|Space+Mono&display=swap');
-/*@import url('https://kit.fontawesome.com/c8dc45cec1.js" crossorigin="anonymous');*/
 
 
 body {
@@ -14,11 +13,6 @@ body {
   height: 100vh;
   grid-template-columns: 1fr 350px;
   grid-template-rows: auto 1fr;
-}
-.tami{
-  position: absolute;
-  width: 100%;
-  z-index: -1;
 }
 .Nav{
   grid-column-start:1;
@@ -58,6 +52,12 @@ body {
 .TopicsListHeader {
   margin-left: 77px;
 }
+.MainThreadsListHeader{/*is the same as TopicsListHeader on frontPage*/
+  margin-left: 77px;
+}
+.ThreadHeader {/*is the same as TopicsListHeader on frontPage*/
+  margin-left: 77px;
+}
 .SelectedThreadsHeader {
   font-family: "Space Mono";
   margin-left: 30px;
@@ -86,6 +86,19 @@ body {
   margin-right: 30px;
   margin-left: 40px;
 }
+.ThreadsList{/*is the same as TopicsList on frontPage*/
+  list-style:none;
+  min-width: auto;
+  margin-right: 30px;
+  margin-left: 40px;
+
+}
+.CommentsList{/*is the same as TopicsList on frontPage*/
+  list-style:none;
+  min-width: auto;
+  margin-right: 30px;
+  margin-left: 40px;
+}
 .TopicsList li {
   padding: 1px;
   background-color: whitesmoke;
@@ -96,7 +109,27 @@ body {
 .TopicsList li:nth-of-type(2n) {
   background: white;
 }
+.ThreadsList li {/*the same...*/
+  padding: 1px;
+  background-color: whitesmoke;
+  margin:0;
+  border-radius: 5px;
+}
 
+.ThreadsList li:nth-of-type(2n) {/*the same...*/
+  background: white;
+}
+
+.CommentsList li {/*the same...*/
+  padding: 1px;
+  background-color: whitesmoke;
+  margin:0;
+  border-radius: 5px;
+}
+
+.CommentsList li:nth-of-type(2n) {/*the same...*/
+  background: white;
+}
 .Topic {
   margin: 10px;
 }
