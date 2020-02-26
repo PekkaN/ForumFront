@@ -152,21 +152,24 @@ const comments = [
     }
 ]
 
-
-
-
-
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
-const Button = (props)=><button className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass}/></button>
+const Button = (props)=><button className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass} onClick={props.clickHandle}/></button>
+const Textarea = (props)=><input type ='textarea' name={props.name} className={props.className}/>
+const TextInput = (props) =><input name={props.name} className = {props.className}/>
 
 const NavBar = ()=> {
     return (
         <div className='Nav'>
-            <Button className = 'HomeButton' src={homePageLogo} imageClass='HomeLogo'/>
+            <Button className = 'HomeButton' src={homePageLogo} imageClass='HomeLogo' clickHandle={goToHome}/>
             <MainHeader className='MainHeader' text = 'Academy Foorumi'/>
-            <Button  className = 'LoginButton' name = 'Kirjaudu' src={signInLogo} imageClass='signInLogo'/>
+            <Button  className = 'LoginButton' name = 'Kirjaudu' src={signInLogo} imageClass='signInLogo'clickHandle={LogIn}/>
         </div>
     )
+}
+const goToHome = ()=> console.log("tästä funktiosta siirrytään etusivulle, joskus tulevaisuudessa...")
+
+const LogIn =()=>{
+    console.log("tästä funktiosta pitää päästä jotenkin sisäänkirjautumis/rekisteröintisivulle, kunhan keretään....")
 }
 const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
@@ -186,6 +189,29 @@ const CommentRows = () => {
             <Comment text = {comment.text} user= {comment.user} timestamp = {comment.timestamp} likes = {comment.likes}/>
         </li>))
 }
+
+const CommentArea = () => <Textarea className='CommentArea' name ='Comment'/>
+const ForumUserHeader = () => <h3>Nimimerkki</h3>
+const UserNameField = () => <TextInput className = 'UserNameField' name = 'userNameField'/>
+const CommentSubmitButton = () => <Button className='CommentSubmitButton' name = 'LÄHETÄ' clickHandle={SubmitComment}/>
+const SubmitComment =()=> {
+    return (
+        console.log('tässä funktiossa tehdään kommentin postaus, kunhan keretään....')
+    )
+}
+
+const CommentBox = () => {
+    return (
+        <div className='CommentBoxContainer'>
+        <form className='CommentBoxForm'>
+            <CommentArea/>
+            <ForumUserHeader/>
+            <UserNameField/>
+            <CommentSubmitButton/>
+        </form>
+        </div>
+    )
+}
 const Thread = ({name,user,timestamp,replies})=> {
     return (
         <div>
@@ -204,6 +230,7 @@ const MainContent = () => {
             <ul className='CommentsList'>
                 {CommentRows()}
             </ul>
+            <CommentBox/>
         </div>
     )
 }
