@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28f5da51-b533-406f-abac-2c99d886776e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AllThreadsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllThreadsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Apps.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apps.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleThreadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleThreadPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,7 @@
       <updated>1582629160016</updated>
       <workItem from="1582629163815" duration="42229000" />
       <workItem from="1582700300894" duration="10359000" />
-      <workItem from="1582719334641" duration="26119000" />
+      <workItem from="1582719334641" duration="27622000" />
     </task>
     <servers />
   </component>

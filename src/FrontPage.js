@@ -71,11 +71,8 @@ const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
 
 
-
-
-
 // const TopicRows = () => topics.map(topic => <li><Topic  name = {topic.name} description={topic.description}/></li>)
-const TopicRows = () => topics.map(topic => <li><Link to={topic.name}><Topic  name = {topic.name} /></Link><p>{topic.description}</p> </li> )
+const TopicRows = () => topics.map(topic => <li><Link to={'./threads/'+topic.name}><Topic  name = {topic.name}/></Link><p>{topic.description}</p> </li> )
 
 const FrontPage = () => {
     return (
