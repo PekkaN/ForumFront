@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import './Apps.css';
 import signInLogo from './sign-in-alt-solid.svg';
 import homePageLogo from './home-solid.svg';
+import LogInForm from "./LogInForm";
+
 const threads = [
     {
         name: 'joten tässä Sakulle rannesyöttö takaisin:',
@@ -154,7 +156,7 @@ const comments = [
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
 const Button = (props)=><button className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass} onClick={props.clickHandle}/></button>
-const Textarea = (props)=><input type ='textarea' name={props.name} className={props.className}/>
+const Textarea = (props)=><textarea name={props.name} className={props.className}/>
 const TextInput = (props) =><input name={props.name} className = {props.className}/>
 
 
@@ -178,8 +180,8 @@ const CommentRows = () => {
 }
 
 const CommentArea = () => <Textarea className='CommentArea' name ='Comment'/>
-const ForumUserHeader = () => <h3>Nimimerkki</h3>
-const UserNameField = () => <TextInput className = 'UserNameField' name = 'userNameField'/>
+//const ForumUserHeader = () => <h3>Nimimerkki</h3>
+//const UserNameField = () => <TextInput className = 'UserNameField' name = 'userNameField'/>
 const CommentSubmitButton = () => <Button className='CommentSubmitButton' name = 'LÄHETÄ' clickHandle={SubmitComment}/>
 const SubmitComment =()=> {
     return (
@@ -192,8 +194,6 @@ const CommentBox = () => {
         <div className='CommentBoxContainer'>
         <form className='CommentBoxForm'>
             <CommentArea/>
-            <ForumUserHeader/>
-            <UserNameField/>
             <CommentSubmitButton/>
         </form>
         </div>
