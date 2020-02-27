@@ -80,6 +80,28 @@ body {
   width: 25px;
   float:right;
 }
+.LoginPage {
+
+}
+.logInFieldBackground {
+  position:absolute;
+  opacity: 50%;
+  z-index: 10;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.LogInForm{
+  position: absolute;
+  z-index: 15;
+  display: block;
+  margin: auto 33.3%;
+  width: 400px;
+  border-style: solid;
+  border-color: black;
+  padding: 20px;
+  background-color: greenyellow;
+}
 .TopicsList{
   list-style:none;
   min-width: auto;
@@ -99,9 +121,7 @@ body {
   margin-right: 30px;
   margin-left: 40px;
 }
-.CommentBoxContainer {
 
-}
 
 .CommentBoxForm{
 
@@ -126,9 +146,6 @@ body {
   border: none;
 }
 
-.ForumUserHeader{
-
-}
 .UserNameField{
   margin: auto;
   width: 800px;
