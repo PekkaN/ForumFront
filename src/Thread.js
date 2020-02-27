@@ -17,7 +17,7 @@ class Thread extends Component {
 
     render() {
         return (
-            <Link to={'./threads/'+this.props.thread.name}> <div className='TopicsList'>
+            <Link to={'./thread/'+this.props.thread.name}> <div className='TopicsList'>
                 <h4>{this.props.thread.name}</h4>
                 <p>{this.props.thread.threadId}</p>
             </div></Link>

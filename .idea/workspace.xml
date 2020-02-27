@@ -5,12 +5,10 @@
 
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AllThreadsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllThreadsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ErrorPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ErrorPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Comment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SingleThreadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleThreadPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Thread.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thread.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Topic.js" afterDir="false" />
 
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +105,7 @@
       <updated>1582629160016</updated>
       <workItem from="1582629163815" duration="42229000" />
       <workItem from="1582700300894" duration="10359000" />
+
 
       <workItem from="1582719334641" duration="41691000" />
 

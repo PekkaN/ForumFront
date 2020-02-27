@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Apps.css';
+
 
 import LogInForm from "./LogInForm";
 
@@ -157,12 +158,33 @@ const Header = (props) => <h2 className={props.className}>{props.text}</h2>
 const Textarea = (props)=><textarea name={props.name} className={props.className}/>
 const TextInput = (props) =><input name={props.name} className = {props.className}/>
 
+        this.state = {
+            comments: [
+                {
+                    text: 'rajuu menoo',
+                    threadText: 'koodattu nii vituiks.',
+                    user: 'Lion74',
+                    timestamp : 2019-12-12,
+                    likes: 0,
+                    commentid: 0
+                }
+            ]
+        }
+    }
+componentDidMount() {
+    const setThreads = (threads) => {
+        console.log(threads)
+        this.setState({
+            threads
+        })
+    }
 
-// const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
 
-const Comment = ({text,likes,timestamp,user})=> {
+render(){
+
     return (
+
         <div>
             <p>{text}</p>
             <div>{likes}</div>
@@ -200,16 +222,20 @@ const CommentBox = () => {
 }
 
 
-const SingleThreadPage = () => {
-    return (
         <div className='MainContent'>
-            <Header className='ThreadHeader' text={ 'KommenttiketjuXXXXX'}/>
-            <ul className='CommentsList'>
-                {CommentRows()}
+            <Header className='TopicsListHeader' text={'Kommentit'}/>
+            <ul >
+                {this.state.threads.map ((thread) => (
+                    <li>
+                        <Thread thread = {thread}/>
+                    </li>
+                ))}
+
             </ul>
             <CommentBox/>
         </div>
     )
+}
 }
 
 

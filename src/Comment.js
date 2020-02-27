@@ -2,24 +2,28 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './Apps.css';
 
+const Header = (props) => <h2 className={props.className}>{props.text}</h2>
+
 class Comment extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Name: this.props.topic.title,
-            description: this.props.topic.description,
-            id: this.props.topic.id
+            text: this.props.comment.text,
+            user: this.props.comment.user,
+            timestamp: this.props.comment.timestamp,
+            likes: this.props.comment.likes,
+            id: this.props.comment.id
         }
     }
 
     render() {
         return (
-            <Link to={'./threads/'+this.props.topic.name}> <div className='TopicsList'>
-                <h4>{this.props.topic.name}</h4>
-                <p>{this.props.topic.description}</p>
-            </div></Link>
+            <div className='TopicsList'>
+                <p>{this.props.comment.user} {this.props.comment.timestamp}</p>
+                <p>{this.props.comment.text}</p>
+            </div>
         );
     }
 }
 
-export default Topic;
+export default Comment;

@@ -3,8 +3,6 @@ import './Apps.css';
 import Topic from "./Topic";
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
-// const Button = (props)=><button className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass}/></button>
-// const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
 class FrontPage extends React.Component{
     constructor(props) {
@@ -40,10 +38,7 @@ componentDidMount() {
 
 
 render(){
-// const TopicRows = () => topics.map(topic => <li><Topic  name = {topic.name} description={topic.description}/></li>)
-// const TopicRows = () => topics.map(topic => <li><Link to={'./threads/'+topic.name}><Topic  name = {topic.name}/></Link><p>{topic.description}</p> </li> )
 
-// const FrontPage = () => {
     return (
 
             <div className='MainContent'>
@@ -56,12 +51,8 @@ render(){
                     ))}
                 </ul>
             </div>
-
-
-
     )
 }
 }
-
 
 export default FrontPage;
