@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './Apps.css';
 import signInLogo from './sign-in-alt-solid.svg';
 import homePageLogo from './home-solid.svg';
+import {Link} from "react-router-dom";
+import Topic from "./Topic";
 
 const threads = [
     {
@@ -99,13 +101,14 @@ const Thread = ({name,user,timestamp,replies})=> {
 const ThreadRows = () => {
     return (
         threads.map(thread => <li>
-            <Thread name = {thread.name} user= {thread.user} timestamp = {thread.timestamp} replies = {thread.replies}/>
+            <Link to="./thread"><Thread name = {thread.name} /></Link><p><Thread user = {thread.user} timestamp = {thread.timestamp} replies = {thread.replies}/></p>
         </li>))
 }
+// const TopicRows = () => topics.map(topic => <li><Link to="./threads"><Topic  name = {topic.name} /></Link><p>{topic.description}</p> </li> )
 
 const AllThreadsPage = () => {
     return (
-        <div className='Main'>
+        <div className='MainContent'>
             <Header className='MainThreadsListHeader' text={ 'AiheXXXXX'}/>
             <ul className='ThreadsList'>
                 {ThreadRows()}

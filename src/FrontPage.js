@@ -2,6 +2,7 @@ import React from 'react';
 import './Apps.css';
 import Topic from "./Topic";
 import AllThreadPage from './AllThreadsPage';
+import {Link} from 'react-router-dom';
 
 const topics = [
     {
@@ -48,18 +49,41 @@ const Header = (props) => <h2 className={props.className}>{props.text}</h2>
 
 const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
-const TopicRows = () => topics.map(topic => <li><Topic  name = {topic.name} description={topic.description}/></li>)
+
+// UNSAFE_componentWillMount() {
+//     const setTopics = (topics) => {
+//         console.log(topics)
+//         this.setState({
+//             topics
+//         })
+//     }
+//
+//     fetch("http://localhost:8080/topics")
+//         .then((response) => {
+//             return response.json();
+//         })
+//         .then(setTopics)
+//         .catch((error)=> {
+//             console.log(error)
+//
+//         })
+// }
 
 
+
+// const TopicRows = () => topics.map(topic => <li><Topic  name = {topic.name} description={topic.description}/></li>)
+const TopicRows = () => topics.map(topic => <li><Link to={'./threads/'+topic.name}><Topic  name = {topic.name}/></Link><p>{topic.description}</p> </li> )
 
 const FrontPage = () => {
     return (
-        <div className='Main'>
-            <Header className='TopicsListHeader' text={ 'Aiheet'}/>
-            <ul className='TopicsList'>
-                {TopicRows()}
-            </ul>
-        </div>
+
+            <div className='MainContent'>
+                <Header className='TopicsListHeader' text={'Aiheet'}/>
+                <ul className='TopicsList'>
+                    {TopicRows()}
+                </ul>
+            </div>
+
     )
 }
 

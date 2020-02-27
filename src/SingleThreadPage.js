@@ -157,20 +157,7 @@ const Button = (props)=><button className = {props.className}>{props.name}<img s
 const Textarea = (props)=><input type ='textarea' name={props.name} className={props.className}/>
 const TextInput = (props) =><input name={props.name} className = {props.className}/>
 
-const NavBar = ()=> {
-    return (
-        <div className='Nav'>
-            <Button className = 'HomeButton' src={homePageLogo} imageClass='HomeLogo' clickHandle={goToHome}/>
-            <MainHeader className='MainHeader' text = 'Academy Foorumi'/>
-            <Button  className = 'LoginButton' name = 'Kirjaudu' src={signInLogo} imageClass='signInLogo'clickHandle={LogIn}/>
-        </div>
-    )
-}
-const goToHome = ()=> console.log("tästä funktiosta siirrytään etusivulle, joskus tulevaisuudessa...")
 
-const LogIn =()=>{
-    console.log("tästä funktiosta pitää päästä jotenkin sisäänkirjautumis/rekisteröintisivulle, kunhan keretään....")
-}
 const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
 
@@ -223,9 +210,9 @@ const Thread = ({name,user,timestamp,replies})=> {
 }
 const ThreadRowsWithNameOnly = () =>  threads.map(thread => <li><Thread name = {thread.name}/></li>)
 
-const MainContent = () => {
+const SingleThreadPage = () => {
     return (
-        <div className='Main'>
+        <div className='MainContent'>
             <Header className='ThreadHeader' text={ 'KommenttiketjuXXXXX'}/>
             <ul className='CommentsList'>
                 {CommentRows()}
@@ -235,26 +222,6 @@ const MainContent = () => {
     )
 }
 
-const SideBar = () => {
-    return (
-        <div className='SideBar'>
-            <Header className='SelectedThreadsHeader'text = 'Poiminnat'/>
-            <ul className='SelectedThreadsList'>
-                {ThreadRowsWithNameOnly()}
-            </ul>
-        </div>
-    )
-}
 
-
-const SingleThreadPage = ()=>{
-    return (
-        <div className='FrontPage'>
-            <NavBar/>
-            <MainContent/>
-            <SideBar/>
-        </div>
-    )
-}
 
 export default SingleThreadPage;
