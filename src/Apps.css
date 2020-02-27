@@ -8,7 +8,7 @@ body {
     sans-serif;
 }
 
-.FrontPage{
+.PageLayout{
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 350px;
@@ -19,7 +19,7 @@ body {
   grid-column-end:3;
   grid-row: 1/2;
   padding: 10px;
-  background-color: black;
+  background-color: #000000;
 }
 
 .MainContent{
