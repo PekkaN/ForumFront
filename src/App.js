@@ -16,7 +16,6 @@ const App = () => {
           <Navbar/>
           <div className="PageLayout">
               <Sidebar className="SideBar"/>
-
               <Switch>
                   <Route exact path="/" component={FrontPage}/>
                   <Route path="/threads" component={AllThreadsPage}/>

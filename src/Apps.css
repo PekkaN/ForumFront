@@ -80,6 +80,29 @@ body {
   width: 25px;
   float:right;
 }
+.LoginPage {
+  display: none;
+
+}
+.logInFieldBackground {
+  position:absolute;
+  opacity: 50%;
+  z-index: 10;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.LogInForm{
+  position: absolute;
+  z-index: 15;
+  display: block;
+  margin: auto 33.3%;
+  width: 400px;
+  border-style: solid;
+  border-color: black;
+  padding: 20px;
+  background-color: greenyellow;
+}
 .TopicsList{
   list-style:none;
   min-width: auto;
@@ -99,6 +122,55 @@ body {
   margin-right: 30px;
   margin-left: 40px;
 }
+
+
+.CommentBoxForm{
+
+  width: 800px;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 1px;
+  border-style: solid;
+  border-color: gainsboro;
+
+}
+
+.CommentArea{
+  width: 800px;
+  height: 300px;
+  margin: auto;
+  font-size: large;
+  font-family: "Space Mono";
+  border-radius: 5px;
+  border: none;
+}
+
+.UserNameField{
+  margin: auto;
+  width: 800px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: large;
+  font-family: "Space Mono";
+}
+.CommentSubmitButton{
+  margin: 40px 0;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  border:none;
+  font-size: medium;
+  font-family: "Space Mono";
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: black;
+
+}
+
+
 .TopicsList li {
   padding: 1px;
   background-color: whitesmoke;
