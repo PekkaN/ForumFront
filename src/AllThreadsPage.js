@@ -1,121 +1,67 @@
 import React, {Component} from 'react';
 import './Apps.css';
-import signInLogo from './sign-in-alt-solid.svg';
-import homePageLogo from './home-solid.svg';
-import {Link} from "react-router-dom";
-import Topic from "./Topic";
-
-const threads = [
-    {
-        name: 'joten tässä Sakulle rannesyöttö takaisin:',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: 'Saku oli aikoinaan valtakunnan lahjakkaimpia ',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name:'kiekkojunnuja (Kiekko-Espoo); valitsi mediabusineksen; ',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: 'media voitti ,jääkiekko hävisi',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: ', mutta intohimo peliin tallella-CHAPEAU SAKU!!!',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name:', mutta intohimo peliin tallella-CHAPEAU SAKU!!!',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: 'joten tässä Sakulle rannesyöttö takaisin:',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: 'Saku oli aikoinaan valtakunnan lahjakkaimpia ',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name:'kiekkojunnuja (Kiekko-Espoo); valitsi mediabusineksen; ',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: 'media voitti ,jääkiekko hävisi',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name: ', mutta intohimo peliin tallella-CHAPEAU SAKU!!!',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    },
-    {
-        name:', mutta intohimo peliin tallella-CHAPEAU SAKU!!!',
-        replies: 10,
-        timestamp: '2020-02-26',
-        user: 'tami'
-    }
-]
-
-
-
-
+// import signInLogo from './sign-in-alt-solid.svg';
+// import homePageLogo from './home-solid.svg';
+// import {Link} from "react-router-dom";
+// import Topic from "./Topic";
+import Thread from "./Thread";
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
-const Button = (props)=><button className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass}/></button>
 
-const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
+class AllThreadsPage extends Component{
+    constructor(props) {
+        super(props);
 
-const Thread = ({name,user,timestamp,replies})=> {
-    return (
-        <div>
-            <p>{name}</p>
-            <div>{user}</div>
-            <div>{timestamp}</div>
-            <div> {replies}</div>
-        </div>)
+        this.state = {
+            threads: [
+                {
+                    threadName: 'rajuu menoo',
+                    threadText: 'koodattu nii vituiks.',
+                    threadTimestamp : 2019-12-12,
+                    threadId: 0,
+                    topicId: 0
+                }
+            ]
+        }
+    }
+
+    componentDidMount() {
+        const setThreads = (threads) => {
+            console.log(threads)
+            this.setState({
+                threads
+            })
+        }
+
+        fetch("http://localhost:8080/forum/topicthreads/")
+            .then((response) => {
+                return response.json();
+            })
+            .then(setThreads)
+            .catch((error)=> {
+                console.log(error)
+
+            })
+    }
+
+
+    render(){
+
+        return (
+
+            <div className='MainContent'>
+                <Header className='TopicsListHeader' text={'Ketjut'}/>
+                <ul >
+                    {this.state.threads.map ((thread) => (
+                        <li>
+                            <Thread thread = {thread}/>
+                        </li>
+                    ))}
+
+                </ul>
+            </div>
+        )
+    }
 }
-const ThreadRows = () => {
-    return (
-        threads.map(thread => <li>
-            <Link to="./thread"><Thread name = {thread.name} /></Link><p><Thread user = {thread.user} timestamp = {thread.timestamp} replies = {thread.replies}/></p>
-        </li>))
-}
-// const TopicRows = () => topics.map(topic => <li><Link to="./threads"><Topic  name = {topic.name} /></Link><p>{topic.description}</p> </li> )
-
-const AllThreadsPage = () => {
-    return (
-        <div className='MainContent'>
-            <Header className='MainThreadsListHeader' text={ 'AiheXXXXX'}/>
-            <ul className='ThreadsList'>
-                {ThreadRows()}
-            </ul>
-        </div>
-    )
-}
-
 
 export default AllThreadsPage;

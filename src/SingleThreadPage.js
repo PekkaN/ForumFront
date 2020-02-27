@@ -1,8 +1,6 @@
-import ReactDOM from 'react-dom';
-import React, {Component} from 'react';
+import React from 'react';
 import './Apps.css';
-import signInLogo from './sign-in-alt-solid.svg';
-import homePageLogo from './home-solid.svg';
+
 import LogInForm from "./LogInForm";
 
 const threads = [
@@ -155,12 +153,12 @@ const comments = [
 ]
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
-const Button = (props)=><button className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass} onClick={props.clickHandle}/></button>
+
 const Textarea = (props)=><textarea name={props.name} className={props.className}/>
 const TextInput = (props) =><input name={props.name} className = {props.className}/>
 
 
-const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
+// const MainHeader = (props)=> <h1 className={props.className}>{props.text}</h1>
 
 
 const Comment = ({text,likes,timestamp,user})=> {
@@ -178,6 +176,7 @@ const CommentRows = () => {
             <Comment text = {comment.text} user= {comment.user} timestamp = {comment.timestamp} likes = {comment.likes}/>
         </li>))
 }
+
 
 const CommentArea = () => <Textarea className='CommentArea' name ='Comment'/>
 //const ForumUserHeader = () => <h3>Nimimerkki</h3>
@@ -199,16 +198,7 @@ const CommentBox = () => {
         </div>
     )
 }
-const Thread = ({name,user,timestamp,replies})=> {
-    return (
-        <div>
-            <p>{name}</p>
-            <div>{user}</div>
-            <div>{timestamp}</div>
-            <div> {replies}</div>
-        </div>)
-}
-const ThreadRowsWithNameOnly = () =>  threads.map(thread => <li><Thread name = {thread.name}/></li>)
+
 
 const SingleThreadPage = () => {
     return (
