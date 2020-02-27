@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import './Apps.css';
-// import signInLogo from './sign-in-alt-solid.svg';
-// import homePageLogo from './home-solid.svg';
-// import {Link} from "react-router-dom";
-// import Topic from "./Topic";
 import Thread from "./Thread";
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
@@ -33,7 +29,7 @@ class AllThreadsPage extends Component{
             })
         }
 
-        fetch("http://localhost:8080/forum/topicthreads/")
+        fetch("http://localhost:8080/forum/topicthreads/2")
             .then((response) => {
                 return response.json();
             })
