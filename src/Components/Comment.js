@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import './Apps.css';
+import '../Apps.css';
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
 
@@ -19,8 +19,8 @@ class Comment extends Component {
     render() {
         return (
             <div className='TopicsList'>
-                <p>{this.props.comment.user} {this.props.comment.timestamp}</p>
-                <p>{this.props.comment.text}</p>
+                <p> {this.props.comment.timestamp}</p>
+                <p>{this.props.comment.text}{this.props.comment.user}</p>
             </div>
         );
     }

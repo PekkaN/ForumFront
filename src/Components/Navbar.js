@@ -1,8 +1,7 @@
 import React from 'react';
-import './Apps.css';
-import signLogo from "./sign-in-alt-solid.svg";
-import homeLogo from './home-solid.svg';
-import Topic from "./Topic";
+import '../Apps.css';
+import signLogo from "../sign-in-alt-solid.svg";
+import homeLogo from '../home-solid.svg';
 import {Link} from "react-router-dom";
 import LogInForm from "./LogInForm";
 

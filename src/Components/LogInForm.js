@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React, {Component} from 'react';
-import './Apps.css';
+import '../Apps.css';
 
 
 const Button = (props)=><button onClick={props.clickHandle} className = {props.className}>{props.name}<img src={props.src} className= {props.imageClass}/></button>

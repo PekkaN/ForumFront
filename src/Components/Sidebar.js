@@ -1,6 +1,6 @@
 import React from "react";
-import './Apps.css';
-import Thread from './Thread'
+import '../Apps.css';
+
 
 
 
