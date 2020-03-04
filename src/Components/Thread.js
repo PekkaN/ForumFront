@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import './Apps.css';
+import '../Apps.css';
 import Topic from './Topic'
 
 class Thread extends Component {
@@ -17,7 +17,7 @@ class Thread extends Component {
 
     render() {
         return (
-            <Link to={'./thread/'+this.props.thread.name}> <div className='TopicsList'>
+            <Link to={'/thread/'+this.props.thread.id}> <div className='TopicsList'>
                 <h4>{this.props.thread.name}</h4>
                 <p>{this.props.thread.threadId}</p>
             </div></Link>

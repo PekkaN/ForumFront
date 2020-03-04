@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './Apps.css';
-import Thread from "./Thread";
+import '../App.css';
+import Thread from "../Components/Thread";
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
 
@@ -12,7 +12,7 @@ class AllThreadsPage extends Component{
             threads: [
                 {
                     threadName: 'rajuu menoo',
-                    threadText: 'koodattu nii vituiks.',
+                    threadText: 'koodattu nii paljon.',
                     threadTimestamp : 2019-12-12,
                     threadId: 0,
                     topicId: 0
@@ -28,8 +28,8 @@ class AllThreadsPage extends Component{
                 threads
             })
         }
-
-        fetch("http://localhost:8080/forum/topicthreads/2")
+        const id = this.props.match.params.id;
+        fetch("http://localhost:8080/forum/topicthreads/"+id)
             .then((response) => {
                 return response.json();
             })
@@ -47,10 +47,10 @@ class AllThreadsPage extends Component{
 
             <div className='MainContent'>
                 <Header className='TopicsListHeader' text={'Ketjut'}/>
-                <ul >
+                <ul className="TopicsList">
                     {this.state.threads.map ((thread) => (
                         <li>
-                            <Thread thread = {thread}/>
+                            <Thread thread = {thread} {...this.props}/>
                         </li>
                     ))}
 

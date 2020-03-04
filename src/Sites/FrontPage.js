@@ -1,6 +1,6 @@
 import React from 'react';
-import './Apps.css';
-import Topic from "./Topic";
+import '../Apps.css';
+import Topic from "../Components/Topic";
 
 const Header = (props) => <h2 className={props.className}>{props.text}</h2>
 
@@ -11,7 +11,7 @@ class FrontPage extends React.Component{
             topics: [
                 {
                     name: 'rajuu menoo',
-                    description: 'koodattu nii vituiks.'
+                    description: 'koodattu nii paljon.'
                 }
             ]
         }
